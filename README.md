@@ -1,2 +1,2 @@
-# HexoArticle
-hexo blog content cimmit
+# HexoAirticle
+hexo blog content trusteeship
