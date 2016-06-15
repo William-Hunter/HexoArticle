@@ -1,8 +1,9 @@
 title: TheArtOfProgram
 date: 2015-11-05 10:54:49
-tags:
+tags: tech
 ---
 ## 编程的艺术
+<!--more-->
 ![](1.jpg) 
 本文译自[Art of Programming](https://medium.com/art-of-programming/about)的文章，出于学习交流和分享的目的，不用于任何商业用途，若有错误，恳请指出。
 在很早之前，有一个对于编程很大的误解，这个想法就是认为编程活动纯粹是技术，具有完全精确地性质，就像数学和物理。计算机是精确的，但是编程不是，前者的结果来自机器，后者依然是一种人类活动。

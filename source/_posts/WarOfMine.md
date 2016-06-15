@@ -1,6 +1,6 @@
 title: WarOfMine
 date: 2015-11-04 14:18:07
-tags:
+tags: game
 ---
 这是我的战争
 <!--more-->

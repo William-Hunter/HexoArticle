@@ -1,6 +1,6 @@
 title: What I Wish I Knew When I Became a Software Engineer
 date: 2015-11-05 11:29:33
-tags:
+tags: tech
 ---
 ### 当我成为软件工程师后我希望当初应该知道一些事的
 <!--more-->

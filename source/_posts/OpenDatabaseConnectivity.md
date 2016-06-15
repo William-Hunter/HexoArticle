@@ -1,6 +1,6 @@
 title: OpenDatabaseConnectivity
 date: 2015-11-05 10:35:33
-tags:
+tags: tech
 ---
 ### 开放数据库连接
 <!--more-->
