@@ -9,7 +9,7 @@ excerpt_link: Read More
 fancybox: true
 
 # Sidebar
-sidebar: left
+sidebar: right
 widgets:
 - category
 - tag
@@ -34,7 +34,3 @@ twitter:
 google_plus:
 fb_admins:
 fb_app_id:
-
-
-# Article
-default_layout: post
