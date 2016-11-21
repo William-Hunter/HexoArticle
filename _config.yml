@@ -62,8 +62,7 @@ pagination_dir: page
 
 # Extensions
 Plugins: hexo-generator-feed
-## Themes: https://hexo.io/themes/
-theme: clean-blog
+theme: hexo-theme-freemind.386
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
