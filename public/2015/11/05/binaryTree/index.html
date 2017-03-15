@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="树状图是一种数据结构，它是由n（n&amp;gt;=1）个有限节点组成一个具有层次关系的集合。把它叫做“树”是因为它看起来像一棵倒挂的树，也就是说它是根朝上，而叶朝下的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="binaryTree">
+<meta property="og:url" content="http://yoursite.com/2015/11/05/binaryTree/index.html">
+<meta property="og:site_name" content="wiliam`s blog">
+<meta property="og:description" content="树状图是一种数据结构，它是由n（n&amp;gt;=1）个有限节点组成一个具有层次关系的集合。把它叫做“树”是因为它看起来像一棵倒挂的树，也就是说它是根朝上，而叶朝下的。">
+<meta property="og:image" content="http://yoursite.com/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2.jpg">
+<meta property="og:image" content="http://yoursite.com/3.jpg">
+<meta property="og:image" content="http://yoursite.com/4.jpg">
+<meta property="og:image" content="http://yoursite.com/5.jpg">
+<meta property="og:image" content="http://yoursite.com/7.jpg">
+<meta property="og:image" content="http://yoursite.com/8.jpg">
+<meta property="og:updated_time" content="2016-06-17T14:04:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="binaryTree">
+<meta name="twitter:description" content="树状图是一种数据结构，它是由n（n&amp;gt;=1）个有限节点组成一个具有层次关系的集合。把它叫做“树”是因为它看起来像一棵倒挂的树，也就是说它是根朝上，而叶朝下的。">
+<meta name="twitter:image" content="http://yoursite.com/1.jpg">
+    
+    
+    <!-- title -->
+    <title>binaryTree</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/William-Hunter">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+      <ul>
+        
+        <li><a class="icon" href="/2015/11/05/SunEclipse/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/11/05/What-I-Wish-I-Knew-When-I-Became-a-Software-Engineer/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+        <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2015/11/05/binaryTree/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2015/11/05/binaryTree/&text=binaryTree"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2015/11/05/binaryTree/&title=binaryTree"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2015/11/05/binaryTree/&is_video=false&description=binaryTree"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="mailto:?subject=binaryTree&body=Check out this article: http://yoursite.com/2015/11/05/binaryTree/"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2015/11/05/binaryTree/&title=binaryTree"><i class="fa fa-get-pocket" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2015/11/05/binaryTree/&title=binaryTree"><i class="fa fa-reddit" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2015/11/05/binaryTree/&title=binaryTree"><i class="fa fa-stumbleupon" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2015/11/05/binaryTree/&title=binaryTree"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
+        <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2015/11/05/binaryTree/&name=binaryTree&description=&lt;p&gt;树状图是一种数据结构，它是由n（n&amp;gt;=1）个有限节点组成一个具有层次关系的集合。把它叫做“树”是因为它看起来像一棵倒挂的树，也就是说它是根朝上，而叶朝下的。&lt;br&gt;"><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#算法描述"><span class="toc-number">1.</span> <span class="toc-text">算法描述</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        binaryTree
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">wiliam`s blog</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2015-11-05T03:33:39.000Z" itemprop="datePublished">2015-11-05</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/DataStruct/">DataStruct</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>树状图是一种数据结构，它是由n（n&gt;=1）个有限节点组成一个具有层次关系的集合。把它叫做“树”是因为它看起来像一棵倒挂的树，也就是说它是根朝上，而叶朝下的。<br><a id="more"></a><br><strong>它具有以下的特点：</strong><br>每个节点有零个或多个子节点；<br>没有父节点的节点称为根节点；<br>每一个非根节点有且只有一个父节点；<br>除了根节点外，每个子节点可以分为多个不相交的子树；<br><img src="1.jpg" alt=""><br>树在很多地方都可以应用和使用，比如对于磁盘文件的遍历，因为文件夹的存储形式的如同金字塔形状，<br><img src="2.jpg" alt=""><br>首先是用结构体数组的模式<br><img src="3.jpg" alt=""><br>然后就是用链表去实现：<br>怎么用链表去实现一个二叉树？<br>我想最终的存储形式应该是这样：<br><img src="4.jpg" alt=""><br>那么节点的数据类型就应该是这样</p>
+<pre><code>struct  Node
+{
+    data;
+    left;
+    right;
+    parenty;
+}；
+</code></pre><p>运行的时候，输入5 3 2 1 0 0 0 4 0 0 8 6 0 7 0 0 9 0 0<br>那么这个树应该是这样的</p>
+<h3 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h3><p>：对于一个二叉树来说，它只有左孩子和右孩子两个方向，节点值为0就代表没有孩子节点，所以用户输入数组里面，最前面的一个数就是根节点的数值，为5,5后面的3代表它的左孩子数值为3，所以我们把注意力里先放在3身上，3后面的数字为2，代表3的左孩子为2，2后面的数值为1，代表3的左孩子为1,1的后面为0（第一个0），代表1没有左节点，1后面的第二个0（第二个0）代表1的右孩子也为0，所以1节点的孩子节点都可以完全确定了，那么返回上一层，2后面第4个0（第三个0），2的右节点为0.。。。。。。。。。。。。。<br><strong>总之一句话：</strong><br>从开头向后读，A为非0数字，成为当前节点A，A后一位A+1为非0数，说明A+1为A的左孩子，遇第一个0则作为A的左孩子，0其后的数字为A的右孩子，当一个节点的左右都有孩子之后，返回父节点。<br><img src="5.jpg" alt=""><br><strong>创建二叉树的伪代码</strong><br><em>flag：用来判断当前节点的与父节点的左指针或者右指针，1代表左，2代表右，</em><br><em>before：指向当前节点的父节点的指针。</em><br><em>word[]：存储用户输入的字符串。</em><br><em>i：字符串的下标序号。</em><br><em>length：字符串的有效长度。</em></p>
+<pre><code>creat（i=0，before=-1，word[]，flag=0，）
+{
+    建立一个node类型的p指针，
+    建立一个node类型空间，地址放在p里面，
+    把word[i]数值放在p指向的空间里面，
+    如果flag==1的话：当前节点的地址给父节点的左指针，before.left=p。
+    如果flag==2的话：当前节点的地址给父节点的右指针，before.right=p。
+    当前节点的parenty指向父节点，p。parenty=before。
+    指向之前节点的指针指向现在的节点，before=p。
+    如果i+1不小于word字符串的有效长度，i+1&gt;=length。
+    预览一下word[i]后一位的数值，如果为0的话：当前节点的左指针为0, 否则i自增一次，进入create函数。if   word[i+1]==‘0’，p.left=0，else  i++，create（word,i+1,length,before,1）
+    预览一下word[i]后两位的数值，如果为0的话：当前节点的右指针为0, 否则i自增两次，进入create函数。if   word[i+2]==‘0’，p.right=0，else  i+=2，create（word,i+2,length,before,2）
+    i自增一次，i++；
+    返回p的地址值，
+}
+</code></pre><p><strong>遍历二叉树的伪代码</strong></p>
+<pre><code>watch（node *P）
+{
+     输出当前节点存储的数值，print data。
+     如果当前节点的左指针为0的话：就输出一个0，否则，就进入函数watch（p。left）        if(P-&gt;left==0)      cout&lt;&lt;&quot;0 &quot;;     else   watch(P-&gt;left);
+     如果当前节点的右指针为0的话：就输出一个0，否则，就进入函数watch（p。right）      if(P-&gt;right==0)    cout&lt;&lt;&quot;0 &quot;;     else   watch(P-&gt;right); 
+}
+</code></pre><p><strong>递归调用的形式</strong><br><img src="7.jpg" alt=""><br><strong>打印信息</strong><br><img src="8.jpg" alt=""> </p>
+
+  </div>
+</article>
+
+
+
+      </div>
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 wiliam`s blog
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/William-Hunter">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
